@@ -1,170 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bej login</title>
+    <title>Login Page</title>
     <style>
-    * {
-    margin: 0;
-    padding: 0;
-}
+        .login-container{
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin: auto;
+            width: 350px;
+            height: 400px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+        }
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
-    background: #131313;
-    font-family:'Helvetica Neue', sans-serif;
-}
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            font-size: 16px;
+        }
 
-h1 a {
-  font-size: 80px;
-  color: #BF2E97;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+        input[type="password"] {
+            background-color: EEE9DA;
+            color: C8B6A6;
+            padding: 8px 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-.popover {
-   display: none;
-   box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
-}
+        input:hover{
+            background-color: ;
+        }
 
-.popover:target {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.popover .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 0;
-  height: 0;
-  color: #fff;
-  background-color: #191919;
-  animation: 1s grow ease forwards;
-  text-align: center;
-}
-
-.nav_list  {
-  list-style-type: none;
-}
-
-.nav_list a {
-  text-decoration: none;
-  font-size: 50px;
-  color: #fff;
-}
-
-.nav_list_item {
-  height: 100%;
-  overflow: hidden;
-}
-
-.nav_list li {
-  padding: 15px 0;
-  text-transform: uppercase;
-  transform: translateY(200px);
-  opacity: 0;
-  animation: 2s slideUp ease forwards .5s;
-  position: relative;
-}
-
-.nav_list li::before {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0px;
-  left: 0;
-  bottom: 10px;
-  background: #BF2E97; 
-  transition: all .5s ease;
-}
-
-.nav_list li:hover:before {
-      width: 100%;
-}
-
-.popover p {
-  padding: 50px;
-  opacity: 0;
-  animation: 1s fadeIn ease forwards 1s;
-}
-
-.popover .close::after {
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  display: flex;
-  z-index: 1;
-  font-size: 30px;
-  align-items: center;
-  justify-content: center;
-  background-color: #BF2E97;
-  color: #fff;
-  content: "×";
-  cursor: pointer;
-  opacity: 0; 
-  animation: 1s fadeIn ease forwards .5s;
-}
-
-@keyframes grow {
-  100% {
-    height: 90%;
-    width: 90%;
- }
-}
-
-@keyframes fadeIn {
-100% {
-  opacity: 1;
- }
-}
-
-@keyframes slideUp {
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
     </style>
+
 </head>
-<div class="container">
-    <h1>
-       <a href="#menu">Click me</a>
-    </h1>
-       
-   <div class="popover" id="menu">
-    <div class = 'content'>
-     <a href="#" class="close"></a>
-      <div class = 'nav'>
-       <ul class = 'nav_list'>
-         
-         <div class = 'nav_list_item'>
-         <li><a href="admin.html">Faqja e administratorit</a></li>
-         </div>
-        <div class = 'nav_list_item'>
-           <li><a href="faqjapuntori.html">Faqja e puntorit</a></li>
-         </div>
-      
-      
-       
-       </ul>
-     </div>
-    </div>
-    </div>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
     </div>
 </body>
+
 </html>

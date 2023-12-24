@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>faqja e administratorit</title>
-
-    <link rel="stylesheet" href="stylee.css">
-
+    <title>Rexhistro Puntoret</title>
     <style>
-        * {
+
+
+<!--style e slidmenuu-->
+* {
             padding: 0;
             margin: 0;
             outline: none;
@@ -34,6 +35,10 @@
             transition: width 0.2s linear;
             box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
         }
+
+       a{
+        text-decoration: none;
+       }
 
         .logo {
             text-align: center;
@@ -89,31 +94,86 @@
             position: absolute;
             bottom: 0;
         }
-        h3{
-            text-align: center;
+<!--perfundimi-->
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .registration-container {
+            width: 500px;
+            height: 400px;
             
+            margin: auto;
+            margin-top: 55px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 16px;
+            font-size: 16px;
+        }
+
+        input[type="password"] {
+            background-color: EEE9DA;
+            color: C8B6A6;
+            padding: 8px 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input:hover {
+           background-color: e2efde;
         }
     </style>
 </head>
+
 <body>
+
     <nav>
         <ul>
             <li class="logo">
-                <img src="user.png" alt="photo">
+                <img src="rexhistro.jpg" alt="photo">
                 <span class="nav-item">Administrator</span>
             </li>
-            <li><a href="regjistrimi.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Rexhistro Puntoret</span></a></li>
-            <li><a href="detyrat.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Detyrat</span></a></li>
-            <li><a href="Njoftimet.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Njoftimet</span></a></li>
-            <li><a href="login.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Log Out</span></a></li>
-            
+
+            <li><a href="admin.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Ktheu prapa</span></a></li>
         </ul>
     </nav>
 
-    <div>
-        <h3>
-            Mir se erdhet ne faqen e administratorit
-        </h3>
+
+    <div class="registration-container">
+        <h2>Rexhistro Puntoret</h2>
+        <form action="regjistrimi.php" method="post">
+            Emri: <input type="text" name="username" required><br>
+
+            Fjalëkalimi: <input type="password" name="password" required><br>
+            <input type="submit" value="Regjistro">
+        </form>
     </div>
 </body>
+
 </html>
