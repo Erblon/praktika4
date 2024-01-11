@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqja Kryesore</title>
+
+    <!-- Lidhja për Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Ngjyra e sfondit në dark mode */
+            color: #fff; /* Ngjyra e tekstit në dark mode */
+        }
+
+        #container {
+            display: flex;
+            width: 100%;
+        }
+
+        #menu {
+            width: 20%;
+            padding: 20px;
+            background-color: #444; /* Ngjyra e sfondit e menysë në dark mode */
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        #content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff; /* Ngjyra e tekstit të linkut në dark mode */
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 40px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <a href="admin.html" target="iframeContent"><i class="fas fa-user"></i> Admin</a>
+        <a href="user.html" target="iframeContent"><i class="fas fa-user"></i> User</a>
+        <a href="logout.html" target="iframeContent"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div id="content">
+        <iframe id="iframeContent" src="index.html"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var iframeContent = document.getElementById('iframeContent');
+
+            function loadPage(page) {
+                iframeContent.src = page;
+            }
+
+            document.querySelector('a[href="admin.html"]').addEventListener('click', function (event) {
+                event.preventDefault();
+                loadPage('admin.html');
+            });
+
+            document.querySelector('a[href="user.html"]').addEventListener('click', function (event) {
+                event.preventDefault();
+                loadPage('user.html');
+            });
+
+            document.querySelector('a[href="logout.html"]').addEventListener('click', function (event) {
+                event.preventDefault();
+                loadPage('logout.html');
+            });
+        });
+    </script>
+</body>
+</html>
