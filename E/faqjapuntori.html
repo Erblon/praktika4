@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            border: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background: #dfe9f5;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            background: #fff;
+            width: 90px;
+            overflow: hidden;
+            transition: width 0.2s linear;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            display: flex;
+            transition: all 0.5s ease;
+            margin: 10px 0 0 10px;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .logo span {
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        a {
+            position: relative;
+            color: rgb(85, 85, 83);
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            width: 300px;
+            padding: 10px;
+        }
+
+        i {
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .nav-item {
+            margin-left: 10px;
+        }
+
+        a:hover {
+            background: #eee;
+        }
+
+        nav:hover {
+            width: 280px;
+            transition: all 0.5s ease;
+        }
+
+        .keluar {
+            position: absolute;
+            bottom: 0;
+        }
+        h3{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo">
+                <img src="puntoret.jpg" alt="photo">
+                <span class="nav-item">Faqja e puntorit</span>
+            </li>
+            
+            <li><a href="detyrat2.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Detyrat</span></a></li>
+            <li><a href="njoftimet2.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Njoftimet</span></a></li>
+            <li><a href="login.html"><i class="bx bxs-dashboard"></i><span class="nav-item">Log Out</span></a></li>
+        </ul>
+    </nav>
+</body>
+</html>
